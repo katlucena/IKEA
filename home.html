@@ -11,62 +11,180 @@
 <body>
     <main class="page-shell">
         <header class="top-bar">
-            <div class="brand"> <img class="brand-logo" src="Assets/IKEA logo.png" alt="IKEA logo" /> </div>
-            <nav class="top-actions"> <button aria-label="Cart"> <img class="icon" src="Assets/Icons/cart.svg"
-                        alt="Cart" /> </button> <button aria-label="Orders"> <img class="icon"
-                        src="Assets/Icons/box.svg" alt="Orders" /> </button> <button aria-label="Favorites"> <img
-                        class="icon" src="Assets/Icons/heart.svg" alt="Favorites" /> </button> <button
-                    aria-label="Account"> <img class="icon" src="Assets/Icons/user.svg" alt="Account" /> </button>
+            <div class="brand"> 
+                <img class="brand-logo" src="Assets/Images/IKEA logo.png" alt="IKEA logo" /> 
+            </div>
+            <nav class="top-actions"> 
+                <button aria-label="Cart"> 
+                    <img class="icon" src="Assets/Icons/cart.svg" alt="Cart" /> 
+                    </button> 
+                <button aria-label="Orders"> 
+                    <img class="icon"src="Assets/Icons/box.svg" alt="Orders" /> 
+                </button> 
+                <button aria-label="Favorites"> 
+                    <img class="icon" src="Assets/Icons/heart.svg" alt="Favorites" /> 
+                </button> 
+                <button aria-label="Account"> 
+                    <img class="icon" src="Assets/Icons/user.svg" alt="Account" /> 
+                </button>
             </nav>
         </header>
         <section class="product-card">
-            <div class="search-container"> <button class="magnifying-glass" aria-label="Search"> <img
-                        class="search-icon" src="Assets/Icons/search.svg" alt="search" /> </button> <input type="text"
-                    id="searchInput" placeholder="Search" /> <button class="camera-icon" id="cameraBtn"
-                    aria-label="Image Search"> <img class="camera-icon" src="Assets/Icons/camera.svg" alt="camera" />
-                </button> <input type="file" id="imageUpload" accept="image/*" hidden /> </div>
-            <div> <span class="link-tabs"> <a href="#" class="active-link">What's new?</a> <a href="#">Offers &
-                        promotions</a> <a href="#">Marketplace</a> </span> </div>
+            <div class="search-container"> 
+                <button class="magnifying-glass" aria-label="Search"> 
+                    <img class="search-icon" src="Assets/Icons/search.svg" alt="search" /> 
+                </button> 
+                <input type="text" id="searchInput" placeholder="Search" /> 
+                <button class="camera-icon" id="cameraBtn" aria-label="Image Search"> 
+                    <img class="camera-icon" src="Assets/Icons/camera.svg" alt="camera" />
+                </button> 
+                <input type="file" id="imageUpload" accept="image/*" hidden /> 
+            </div>
+            <div> 
+                <span class="link-tabs"> 
+                    <a href="#" class="active-link">What's new?</a> 
+                    <a href="#">Offers & promotions</a> 
+                    <a href="#">Marketplace</a> 
+                </span> 
+            </div>
             <div class="promo-wrapper">
-                <div class="promo-scroll" id="promoScroll"> <img class="promo-banner"
-                        src="Assets/Home/promo banner1.png" alt="promo-banner" /> <img class="promo-banner"
-                        src="Assets/Home/promo banner2.png" alt="promo-banner" /> </div>
-                <div class="carousel-dots"> <span class="dot active"></span> <span class="dot"></span> <span
-                        class="dot"></span> </div>
+                <div class="promo-scroll" id="promoScroll"> 
+                    <img class="promo-banner" src="Assets/Images/promo banner1.png" alt="promo-banner" /> 
+                    <img class="promo-banner" src="Assets/Images/promo banner2.png" alt="promo-banner" />
+                    <img class="promo-banner" src="Assets/Images/promo banner3.png" alt="promo-banner" />
+                </div>
+                <div class="carousel-dots"> 
+                    <span class="dot active"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
             </div>
             <div class="top-sellers">
-                <h1>Top Sellers</h1> <span class="see-more"><a class="see-more-link" href="#">See More</a> <img
-                        src="Assets/Icons/chevron right.svg" class="chevron-right" alt="chevron right" /> </span>
+                <h1>Top Sellers</h1> 
+                <span class="see-more">
+                    <a class="see-more-link" href="#">See More</a> 
+                    <img src="Assets/Icons/chevron right.svg" class="chevron-right" alt="chevron right" /> 
+                </span>
             </div>
             <div class="top-seller-products">
-                <div class="top-seller-card"> <button class="arcamera-btn" aria-label="View product"> <img
-                            src="Assets/Home/ARCamera.svg" alt=""> </button> <button class="favorite-button"
-                        aria-label="Add to favorites" aria-pressed="false"> <img class="icon favorite-icon"
-                            id="productCopy" src="Assets/Icons/heart (colored).svg" alt="Favorite"
-                            data-default-src="Assets/Icons/heart (colored).svg"
-                            data-active-src="Assets/Icons/heart (white).svg" /> </button> <img
-                        src="Assets/Home/matchspel.png" class="matchspel-img" alt="matchspel" />
+                <div class="top-seller-card">
+                    <button class="arcamera-btn" aria-label="View product">
+                        <img src="Assets/Icons/ARCamera.svg" alt="">
+                    </button>
+                    <button class="favorite-button" aria-label="Add to favorites" aria-pressed="false">
+                        <img class="icon favorite-icon" src="Assets/Icons/heart (colored).svg" alt="Favorite"
+                            data-default-src="Assets/Icons/heart (colored).svg" data-active-src="Assets/Icons/heart (white).svg" />
+                    </button>
+                    <img src="Assets/Images/ekolsund.png" class="ekolsund-img" alt="ekolsund" />
                     <h1>MATCHSPEL</h1>
-                    <div class="category">Gaming chair</div>
-                    <div class="price-row"> <span class="price">₱7,190</span> <span class="price-original">₱9,490</span>
-                        <span class="price-off">24% off</span> </div>
+                    <div class="category">Recliner</div>
+                    <div class="price-row">
+                        <div class="prices">
+                            <span class="price">₱12,999</span>
+                            <span class="price-original">₱18,999</span>
+                        </div>
+                        <span class="price-off">32% off</span>
+                    </div>
                     <div class="rating">
-                        <div class="reviews-star-rating"> <img src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                src="Assets/Icons/star (white).svg" alt="Star" /> <img
-                                src="Assets/Icons/star (white).svg" alt="Star" /> </div>
+                        <div class="reviews-star-rating">
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (white).svg" alt="Star" />
+                            <img src="Assets/Icons/star (white).svg" alt="Star" />
+                        </div>
                     </div>
                     <div class="swatches">
-                        <div class="swatch-wrapper"> <img class="swatch-thumb" src="Assets/Home/colors gray.svg"
-                                alt="Bomstad white" /> </div>
-                        <div class="swatch-wrapper"> <img class="swatch-thumb" src="Assets/Home/colors white.svg"
-                                alt="Pure white" /> </div>
-                        <div class="swatch-wrapper"> <img class="swatch-thumb" src="Assets/Home/colors black.svg"
-                                alt="Black" /> </div>
-                    </div> <button class="add-btn" aria-label="Add to cart"> <img src="Assets/Home/add to cart.svg"
-                            alt="Add to cart"> </button>
+                        <div class="swatch-wrapper">
+                            <img class="swatch-thumb" src="Assets/Icons/colors pink.svg" alt="Bomstad white" />
+                        </div>
+                        <div class="swatch-wrapper">
+                            <img class="swatch-thumb" src="Assets/Icons/colors dark gray.svg" alt="Pure white" />
+                        </div>
+                    </div>
+                    <button class="add-btn" aria-label="Add to cart">
+                        <img src="Assets/Icons/add to cart.svg" alt="Add to cart">
+                    </button>
                 </div>
+
+                <div class="top-seller-card">
+                    <button class="arcamera-btn" aria-label="View product"> 
+                        <img src="Assets/Icons/ARCamera.svg" alt=""> 
+                    </button> 
+                    <button class="favorite-button" aria-label="Add to favorites" aria-pressed="false"> 
+                        <img class="icon favorite-icon" src="Assets/Icons/heart (colored).svg" alt="Favorite" data-default-src="Assets/Icons/heart (colored).svg" data-active-src="Assets/Icons/heart (white).svg" /> 
+                    </button> 
+                        <img src="Assets/Images/matchspel.png" class="matchspel-img" alt="matchspel" />
+                    <h1>MATCHSPEL</h1>
+                    <div class="category">Gaming chair</div>
+                        <div class="price-row"> 
+                            <div class="prices">
+                                <span class="price">₱7,190</span>
+                                <span class="price-original">₱9,490</span>
+                                </div>
+                            <span class="price-off">24% off</span> 
+                        </div>
+                    <div class="rating">
+                        <div class="reviews-star-rating"> 
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                            <img src="Assets/Icons/star (white).svg" alt="Star" /> 
+                            <img src="Assets/Icons/star (white).svg" alt="Star" /> 
+                        </div>
+                    </div>
+                    <div class="swatches">
+                        <div class="swatch-wrapper"> 
+                            <img class="swatch-thumb" src="Assets/Icons/colors gray.svg" alt="Bomstad white" /> 
+                        </div>
+                        <div class="swatch-wrapper"> 
+                            <img class="swatch-thumb" src="Assets/Icons/colors white.svg" alt="Pure white" /> 
+                        </div>
+                        <div class="swatch-wrapper"> 
+                            <img class="swatch-thumb" src="Assets/Icons/colors black.svg" alt="Black" /> 
+                        </div>
+                    </div> 
+                    <button class="add-btn" aria-label="Add to cart"> 
+                        <img src="Assets/Icons/add to cart.svg" alt="Add to cart"> 
+                    </button>
+                </div>
+
+                <div class="top-seller-card">
+                    <button class="arcamera-btn" aria-label="View product">
+                        <img src="Assets/Icons/ARCamera2.svg" alt="">
+                    </button>
+                    <button class="favorite-button" aria-label="Add to favorites" aria-pressed="false">
+                        <img class="icon favorite-icon" src="Assets/Icons/heart (colored).svg" alt="Favorite"
+                            data-default-src="Assets/Icons/heart (colored).svg" data-active-src="Assets/Icons/heart (white).svg" />
+                    </button>
+                    <img src="Assets/Images/hemnes.png" class="hemnes-img" alt="hemnes" />
+                    <h1>HEMNES</h1>
+                    <div class="category">Bookcase</div>
+                    <div class="price-row">
+                        <span class="price">₱14,990</span>
+                    </div>
+                    <div class="rating">
+                        <div class="reviews-star-rating">
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                            <img src="Assets/Icons/star (white).svg" alt="Star" />
+                        </div>
+                    </div>
+                    <div class="swatches">
+                        <div class="swatch-wrapper">
+                            <img class="swatch-thumb" src="Assets/Icons/colors brown.svg" alt="Bomstad white" />
+                        </div>
+                        <div class="swatch-wrapper">
+                            <img class="swatch-thumb" src="Assets/Icons/colors white.svg" alt="Pure white" />
+                        </div>
+                    </div>
+                    <button class="add-btn" aria-label="Add to cart">
+                        <img src="Assets/Icons/add to cart.svg" alt="Add to cart">
+                    </button>
+                </div>
+
             </div>
         </section>
     </main>

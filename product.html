@@ -11,23 +11,35 @@
 <body>
     <main class="page-shell">
         <header class="top-bar">
-            <div class="brand"> <img class="brand-logo" src="Assets/IKEA logo.png" alt="IKEA logo" /> </div>
-            <nav class="top-actions"> <button aria-label="Cart"> <img class="icon" src="Assets/Icons/cart.svg"
-                        alt="Cart" /> </button> <button aria-label="Orders"> <img class="icon"
-                        src="Assets/Icons/box.svg" alt="Orders" /> </button> <button aria-label="Favorites"> <img
-                        class="icon" src="Assets/Icons/heart.svg" alt="Favorites" /> </button> <button
-                    aria-label="Account"> <img class="icon" src="Assets/Icons/user.svg" alt="Account" /> </button>
+            <div class="brand"> 
+                <img class="brand-logo" src="Assets/Images/IKEA logo.png" alt="IKEA logo" /> 
+            </div>
+            <nav class="top-actions"> 
+                <button aria-label="Cart"> 
+                    <img class="icon" src="Assets/Icons/cart.svg" alt="Cart" /> 
+                </button> 
+                <button aria-label="Orders"> 
+                    <img class="icon" src="Assets/Icons/box.svg" alt="Orders" /> 
+                </button> 
+                <button aria-label="Favorites"> 
+                    <img class="icon" src="Assets/Icons/heart.svg" alt="Favorites" /> 
+                </button> 
+                <button aria-label="Account"> 
+                    <img class="icon" src="Assets/Icons/user.svg" alt="Account" /> 
+                </button>
             </nav>
         </header>
-        <section class="product-card"> <button class="back-button" aria-label="Go back"> <img class="icon"
-                    src="Assets/Icons/back button.svg" alt="Back" /> </button> <button class="favorite-button"
-                aria-label="Add to favorites" aria-pressed="false"> <img class="icon favorite-icon"
-                    src="Assets/Icons/heart (colored).svg" alt="Favorite"
-                    data-default-src="Assets/Icons/heart (colored).svg"
-                    data-active-src="Assets/Icons/heart (white).svg" /> </button>
+        <section class="product-card"> 
+            <button class="back-button" aria-label="Go back"> 
+                <img class="icon" src="Assets/Icons/back button.svg" alt="Back" /> 
+            </button> 
+            <button class="favorite-button" aria-label="Add to favorites" aria-pressed="false"> 
+                <img class="icon favorite-icon" src="Assets/Icons/heart (colored).svg" alt="Favorite" data-default-src="Assets/Icons/heart (colored).svg" data-active-src="Assets/Icons/heart (white).svg" /> 
+            </button>
             <div class="image-panel">
-                <div class="image-frame"> <img id="productImage" src="Assets/Sofa 360 (Pink).png"
-                        alt="Pink sofa recliner" /> </div>
+                <div class="image-frame"> 
+                    <img id="productImage" src="Assets/Images/ekolsund 360.png" alt="Pink sofa recliner" /> 
+                </div>
             </div>
             <div class="product-details">
                 <div class="product-title-row">
@@ -37,12 +49,14 @@
                     </div>
                     <div class="meta">
                         <div class="rating">
-                            <div class="star-rating"> <img src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                    src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                    src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                    src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                    src="Assets/Icons/star (white).svg" alt="Star" /> <span
-                                    class="rating-count">(6)</span> </div>
+                            <div class="star-rating"> 
+                                <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                <img src="Assets/Icons/star (white).svg" alt="Star" /> 
+                                <span class="rating-count">(6)</span> 
+                            </div>
                         </div>
                         <p class="price">₱18,999</p>
                     </div>
@@ -53,25 +67,42 @@
                         style </p>
                 </div>
                 <div class="swatches">
-                    <div class="swatch-wrapper"> <span class="swatch-label">Gunnared light pink</span> <button
-                            class="swatch selected" type="button" data-image="Assets/Sofa 360 (Pink).png"> <img
-                                class="swatch-thumb" src="Assets/Sofa (Pink).png" alt="Gunnared light pink" /> </button>
+                    <div class="swatch-wrapper"> 
+                        <span class="swatch-label">Gunnared light pink</span> 
+                        <button class="swatch selected" type="button" data-image="Assets/Sofa 360 (Pink).png"> 
+                            <img class="swatch-thumb" src="Assets/Images/Sofa (Pink).png" alt="Gunnared light pink" /> 
+                        </button>
                     </div>
-                    <div class="swatch-wrapper"> <span class="swatch-label">Dark gray</span> <button class="swatch"
-                            type="button" data-image="Assets/Sofa (Gray).png"> <img class="swatch-thumb"
-                                src="Assets/Sofa (Gray).png" alt="Dark gray" /> </button> </div>
+                    <div class="swatch-wrapper"> 
+                        <span class="swatch-label">Dark gray</span> 
+                        <button class="swatch" type="button" data-image="Assets/Images/Sofa (Gray).png"> 
+                            <img class="swatch-thumb" src="Assets/Images/Sofa (Gray).png" alt="Dark gray" /> 
+                        </button> 
+                    </div>
                 </div>
-                <div class="quantity-line"> <button id="decrease">−</button> <span id="quantity">1</span> <button
-                        id="increase">+</button> </div> <button class="add-cart">ADD TO CART</button>
+                <div class="quantity-line"> 
+                    <button id="decrease">−</button> <span id="quantity">1</span> 
+                    <button id="increase">+</button> 
+                </div> 
+                <button class="add-cart">ADD TO CART</button>
                 <div class="stock-info">
-                    <div class="stock-row"> <span class="stock-location"> <img src="Assets/Icons/delivery truck.svg"
-                                class="delivery-icon" alt="Delivery truck" /> Delivery </span> <span
-                            class="stock-availability"> <img src="Assets/Icons/green circle.svg" class="stock-icon"
-                                alt="Stock available" /> In stock </span> </div>
-                    <div class="stock-row"> <span class="stock-location"> <img src="Assets/Icons/warehouse.svg"
-                                class="warehouse-icon" alt="Warehouse" /> IKEA Store </span> <span
-                            class="stock-availability"> <img src="Assets/Icons/green circle.svg" class="stock-icon"
-                                alt="Stock available" /> In stock </span> </div>
+                    <div class="stock-row"> 
+                        <span class="stock-location"> <img src="Assets/Icons/delivery truck.svg" class="delivery-icon" alt="Delivery truck" /> Delivery 
+                        </span> 
+                        <span class="stock-availability"> 
+                            <img src="Assets/Icons/green circle.svg" class="stock-icon" alt="Stock available" /> In stock 
+                        </span> 
+                    </div>
+                    <div class="stock-row"> 
+                        <span class="stock-location"> 
+                            <img src="Assets/Icons/warehouse.svg" class="warehouse-icon" alt="Warehouse" />
+                            IKEA Store
+                        </span> 
+                        <span class="stock-availability"> 
+                            <img src="Assets/Icons/green circle.svg" class="stock-icon" alt="Stock available" />
+                            In stock
+                        </span>
+                    </div>
                 </div>
                 <div class="product-description-row">
                     <div class="product-details">
@@ -81,41 +112,58 @@
                             want to sit upright, lean back or lie back for a nap. </p>
                     </div>
                 </div>
-                <hr class="solid"> <span class="product-modals">
-                    <h1>Product details</h1> <img src="Assets/Icons/chevron right.svg" class="chevron-right"
-                        alt="chevron right" />
+                <hr class="solid"> 
+                <span class="product-modals">
+                    <h1>Product details</h1> 
+                    <img src="Assets/Icons/chevron right.svg" class="chevron-right" alt="chevron right" />
                 </span>
-                <hr class="solid"> <span class="product-modals">
-                    <h1>What's included</h1> <img src="Assets/Icons/chevron right.svg" class="chevron-right"
-                        alt="chevron right" />
+                <hr class="solid"> 
+                <span class="product-modals">
+                    <h1>What's included</h1> 
+                    <img src="Assets/Icons/chevron right.svg" class="chevron-right" alt="chevron right" />
                 </span>
-                <hr class="solid"> <span class="product-modals">
-                    <h1>Measurements</h1> <img src="Assets/Icons/chevron right.svg" class="chevron-right"
-                        alt="chevron right" />
+                <hr class="solid"> 
+                <span class="product-modals">
+                    <h1>Measurements</h1> 
+                    <img src="Assets/Icons/chevron right.svg" class="chevron-right" alt="chevron right" />
                 </span>
-                <hr class="solid"> <span class="product-modals"> <span class="customer-reviews">
+                <hr class="solid"> 
+                <span class="product-modals"> 
+                    <span class="customer-reviews">
                         <h1>Customer reviews</h1>(6)
-                    </span> <a class="view-all" href="#">View All</a> </span>
+                    </span> 
+                    <a class="view-all" href="#">View All</a> 
+                </span>
                 <div class="reviews-block">
-                    <div class="reviews-info"> <span class="reviews-row"> M**K**L <div class="rating">
-                                <div class="reviews-star-rating"> <img src="Assets/Icons/star (yellow).svg"
-                                        alt="Star" /> <img src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (white).svg" alt="Star" /> </div>
-                            </div> </span>
+                    <div class="reviews-info"> 
+                        <span class="reviews-row"> M**K**L 
+                            <div class="rating">
+                                <div class="reviews-star-rating"> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (white).svg" alt="Star" /> 
+                                </div>
+                            </div> 
+                        </span>
                         <p class="review-variation">Gunnared light pink</p>
                         <p class="review-text">Easy to assemble</p>
                     </div>
                 </div>
                 <div class="reviews-block">
-                    <div class="reviews-info"> <span class="reviews-row"> P**L <div class="rating">
-                                <div class="reviews-star-rating"> <img src="Assets/Icons/star (yellow).svg"
-                                        alt="Star" /> <img src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (yellow).svg" alt="Star" /> <img
-                                        src="Assets/Icons/star (white).svg" alt="Star" /> </div>
-                            </div> </span>
+                    <div class="reviews-info"> 
+                        <span class="reviews-row"> P**L 
+                            <div class="rating">
+                                <div class="reviews-star-rating"> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (yellow).svg" alt="Star" /> 
+                                    <img src="Assets/Icons/star (white).svg" alt="Star" /> 
+                                </div>
+                            </div> 
+                        </span>
                         <p class="review-variation">Gunnared light pink</p>
                         <p class="review-text">Affordable price for a great quality product</p>
                     </div>

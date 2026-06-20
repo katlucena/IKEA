@@ -12,7 +12,7 @@ imageUpload.addEventListener("change", (e) => { const file = e.target.files[0];
         } 
     }); 
     
-const slideWidth = slides[0].offsetWidth + 8; 
+// const slideWidth = slides[0].offsetWidth + 8; 
 const scrollContainer = document.getElementById('promoScroll'); 
 const slides = scrollContainer.querySelectorAll('.promo-banner'); 
 const dotsContainer = document.querySelector('.carousel-dots'); 

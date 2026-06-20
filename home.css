@@ -58,7 +58,6 @@ body {
 .top-actions {
     display: flex;
     align-items: center;
-    gap: px;
 }
 
 .top-actions button {
@@ -85,50 +84,24 @@ body {
     height: 22px;
 }
 
-.favorite-button {
-    position: absolute;
-    border: none;
-    background: transparent;
-    padding: 8px;
-    border-radius: 50%;
-    color: #444;
-    cursor: pointer;
-    top: 18px;
-    right: 18px;
-    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-}
-
-.favorite-button .icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.18s ease, opacity 0.18s ease;
-}
-
-.favorite-button:active,
-.favorite-button:focus-visible {
-    transform: scale(0.92);
-    background-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
 .favorite-button:active .icon {
     transform: scale(0.9);
 }
 
 .arcamera-btn {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.18s ease, opacity 0.18s ease;
     position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 999;
     border: none;
     background: transparent;
-    padding: 8px;
-    border-radius: 50%;
-    color: #444;
+    padding: 0;
     cursor: pointer;
-    top: 18px;
-    right: 18px;
-    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.arcamera-btn img {
+    width: 22px;
+    height: 22px;
 }
 
 .product-card {
@@ -138,14 +111,14 @@ body {
     width: 100%;
     flex: 1;
     margin: 0;
-    padding: 32px 20px 20px 20px;
+    padding: 32px 0 20px 20px;
     overflow: hidden;
 }
 
 .search-container {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 20px);
     max-width: 500px;
     height: 50px;
     border-radius: 8px;
@@ -153,6 +126,7 @@ body {
     overflow: hidden;
     padding: 0 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-right: 20px;
 }
 
 .search-container button {
@@ -209,12 +183,16 @@ a {
     transform: translatey(-2px);
 }
 
-/* a:active{ color: #484848; font-weight: bold; text-decoration: none; } */
-/* a:link{ color: #484848; font-weight: 400; text-decoration: none; } */
 .promo-wrapper {
     width: 100%;
-    /* cancel the parent's horizontal padding */
-    margin-right: -20px;
+}
+
+.promo-banner {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    width: 350px;
+    height: auto;
+    padding-right: 12px;
 }
 
 .promo-scroll {
@@ -226,11 +204,6 @@ a {
 
 .promo-scroll::-webkit-scrollbar {
     display: none;
-}
-
-.promo-banner {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
 }
 
 .carousel-dots {
@@ -254,17 +227,12 @@ a {
     background: #9B9B9B;
 }
 
-.promo-banner {
-    width: 350px;
-    height: auto;
-}
-
 .top-sellers {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 22px;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 .top-sellers h1 {
@@ -280,33 +248,52 @@ a {
 
 .see-more {
     display: flex;
-    gap: 6px;
+    gap: 2px;
     justify-content: center;
 }
 
 .see-more-link {
-    margin-top: -3px;
+    margin-top: 0;
 }
 
 .chevron-right {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     filter: brightness(0) saturate(100%) invert(28%) sepia(1%) saturate(0%) hue-rotate(189deg) brightness(99%) contrast(93%);
 }
 
 .top-seller-products {
+    display: flex;
+    overflow-x: auto;
     padding-top: 30px;
+
+    scrollbar-width: none;
+}
+
+.top-seller-products::-webkit-scrollbar {
+    display: none;
 }
 
 .top-seller-card {
+    flex-shrink: 0;
     position: relative;
-    width: 230px;
+    width: 260px;
     height: 410px;
-    background-color: #E4F2FB;
+    background-color: #fff7e4;
     border-radius: 40px;
     padding-top: 220px;
     overflow: visible;
     padding-left: 25px;
+    margin-right: 16px;
+}
+
+.top-seller-card:nth-child(2) {
+    background-color: #E4F2FB; 
+}
+
+.top-seller-card:nth-child(3) {
+    /* background-color: #fdf4e1; */
+    background-color: #FDE1E6;
 }
 
 .top-seller-card h1 {
@@ -322,9 +309,34 @@ a {
     /* move image outside card */
     left: 50%;
     transform: translateX(-50%);
+    width: 250px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hemnes-img {
+    position: absolute;
+    top: -33px;
+    /* move image outside card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ekolsund-img {
+    position: absolute;
+    top: 20px;
+    /* move image outside card */
+    left: 50%;
+    transform: translateX(-50%);
     width: 200px;
     height: auto;
     z-index: 2;
+    pointer-events: none;
 }
 
 .card-content h2 {
@@ -337,15 +349,23 @@ a {
 }
 
 .price-row {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
+    width: 100%;
 }
 
 .price {
     font-size: 22px;
     font-weight: bold;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .price-original {
@@ -460,30 +480,10 @@ a {
     display: block;
 }
 
-.favorite-button {
-    position: absolute;
-    border: none;
-    background: transparent;
-    padding: 8px;
-    border-radius: 50%;
-    color: #444;
-    cursor: pointer;
-    top: 18px;
-    right: 18px;
-    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-}
-
 .favorite-button .icon {
     width: 20px;
     height: 20px;
     transition: transform 0.18s ease, opacity 0.18s ease;
-}
-
-.favorite-button:active,
-.favorite-button:focus-visible {
-    transform: scale(0.92);
-    background-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .favorite-button:active .icon {
@@ -499,4 +499,13 @@ a {
     cursor: pointer;
     top: 18px;
     right: 18px;
+}
+
+.favorite-button,
+.favorite-button:focus,
+.favorite-button:focus-visible,
+.favorite-button:active {
+    background: transparent !important;
+    outline: none;
+    box-shadow: none;
 }
