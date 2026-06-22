@@ -1,97 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IKEA — Welcome</title>
+    <link rel="stylesheet" href="auth.css" />
+    <meta name="description" content="Welcome to IKEA — sign up or log in" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>IKEA — Welcome</title>
-  <link rel="stylesheet" href="auth.css" />
-  <meta name="description" content="Welcome to IKEA — sign up or log in" />
-</head>
-
-<body>
-    <div class="auth-shell"><header class="auth-splash"> 
-        <img class="auth-logo" src="Assets/Images/Ikea Logo Full.jpg" alt="IKEA logo" />
-            <h1>Make<br>Everyday<br>Extraordinary.</h1>
-            <div class="splash-actions"> 
-                <button id="continueWithApple" class="btn secondary"> 
-                    <img src="Assets/Icons/apple.svg" class="btn-icon" alt="Apple logo" aria-hidden="true" /> 
-                    <span class="btn-text">Continue with Apple</span> 
-                </button> 
-                <button id="continueWithGoogle" class="btn secondary"> 
-                    <img src="Assets/Icons/google.svg" class="btn-icon" alt="Google logo" aria-hidden="true" /> <span class="btn-text">Continue with Google</span> 
-                </button>
-                <p class="btn-divider">OR</p> 
-                <button id="createAccount" class="btn primary">Create account</button>
-                <!-- <button id="signIn" class="btn ghost">Sign in</button> -->
-            </div>
-        </header>
-        <main id="authForms" class="auth-forms hidden" aria-hidden="true">
-            <div class="forms-container" role="dialog" aria-modal="true" aria-label="Sign up or log in">
-                <!-- <span class="form-title">Create an IKEA account</span> 
+  <body>
+    <div class="auth-shell">
+      <header class="auth-splash">
+        <img
+          class="auth-logo"
+          src="Assets/Images/Ikea Logo Full.jpg"
+          alt="IKEA logo"
+        />
+        <h1>Make<br />Everyday<br />Extraordinary.</h1>
+        <div class="splash-actions">
+          <button id="continueWithApple" class="btn secondary">
+            <img
+              src="Assets/Icons/apple.svg"
+              class="btn-icon"
+              alt="Apple logo"
+              aria-hidden="true"
+            />
+            <span class="btn-text">Continue with Apple</span>
+          </button>
+          <button id="continueWithGoogle" class="btn secondary">
+            <img
+              src="Assets/Icons/google.svg"
+              class="btn-icon"
+              alt="Google logo"
+              aria-hidden="true"
+            />
+            <span class="btn-text">Continue with Google</span>
+          </button>
+          <p class="btn-divider">OR</p>
+          <button id="createAccount" class="btn primary">Create account</button>
+          <!-- <button id="signIn" class="btn ghost">Sign in</button> -->
+        </div>
+      </header>
+      <main id="authForms" class="auth-forms hidden" aria-hidden="true">
+        <div
+          class="forms-container"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Sign up or log in"
+        >
+          <!-- <span class="form-title">Create an IKEA account</span> 
                 <button id="closeForms" class="btn-close"> -->
-                    <div class="form-header">
-                        <span class="form-title">
-                            Create an IKEA account
-                        </span>
-                        <button id="closeForms" class="btn-close">
-                            <!-- <img src="Assets/Icons/chevron down.svg" alt=""> -->
-                        </button>
-                    </div>
-                    <!-- <img src="Assets/Icons/chevron down.svg" alt="toggle password visibility" />  -->
-                <form id="signupForm" class="form active" autocomplete="on">
-                    <div class="form-group"> <label class="form-label" for="su-fname">First Name</label> <input
-                            type="text" id="su-fname" placeholder="" required /> </div>
-                    <div class="form-group"> <label class="form-label" for="su-lname">Last Name</label> <input
-                            type="text" id="su-lname" placeholder="" required /> </div>
-                    <div class="form-group"> <label class="form-label" for="su-phone">Mobile Number (Optional)</label>
-                        <div class="phone-row"> <select id="su-country" class="country-code">
-                                <option value="PH" selected>PH (+63)</option>
-                                <option value="US">US (+1)</option>
-                                <option value="GB">GB (+44)</option>
-                                <option value="AU">AU (+61)</option>
-                                <option value="CA">CA (+1)</option>
-                            </select> <input type="tel" id="su-phone" class="phone-input" inputmode="numeric"
-                                pattern="[0-9]*" /> </div>
-                    </div>
-                    <div class="form-group"> <label class="form-label" for="su-email">Email Address</label> <input
-                            type="email" id="su-email" placeholder="" required /> </div>
-                    <div class="form-group"> <label class="form-label" for="su-pass">Password</label>
-                        <div class="password-field"> <input type="password" id="su-pass" placeholder="" required />
-                            <button type="button" class="password-toggle" aria-pressed="false"
-                                aria-label="Show password"> <img src="Assets/Icons/password eye closed.svg"
-                                    alt="toggle password visibility" />
-                            </button> 
-                        </div>
-                    </div> 
-                    <div class="agreement">
-                        <input type="checkbox" id="agreeTerms" class="agreement-checkbox" required>
-                    
-                        <label for="agreeTerms" class="agreement-text">
-                            By signing up, you agree to our
-                            <a href="#">Terms and Privacy Policy</a>,
-                            a commitment that safeguards your shopping experience.
-                        </label>
-                    </div>
-
-                    <button id="submitCreateAccount" type="submit" class="btn primary">
-                        Create account
-                    </button>
-                </form>
-                <form id="loginForm" class="form" autocomplete="on">
-                    <div class="form-group"> <label class="form-label" for="li-email">Email address</label> <input
-                            type="email" id="li-email" placeholder="" required /> </div>
-                    <div class="form-group"> <label class="form-label" for="li-pass">Password</label>
-                        <div class="password-field"> <input type="password" id="li-pass" placeholder="" required />
-                            <button type="button" class="password-toggle" aria-pressed="false"
-                                aria-label="Show password"> <img src="Assets/Icons/password eye closed.svg"
-                                    alt="toggle password visibility" /> </button> </div>
-                    </div> <button type="submit" class="btn primary">Sign in</button>
-                </form>
+          <div class="form-header">
+            <span class="form-title"> Create an IKEA account </span>
+            <button id="closeForms" class="btn-close">
+              <!-- <img src="Assets/Icons/chevron down.svg" alt=""> -->
+            </button>
+          </div>
+          <!-- <img src="Assets/Icons/chevron down.svg" alt="toggle password visibility" />  -->
+          <form id="signupForm" class="form active" autocomplete="on">
+            <div class="form-group">
+              <label class="form-label" for="su-fname">
+                First Name
+                <span class="required">*</span>
+              </label>
+              <input type="text" id="su-fname" placeholder="" required />
             </div>
-        </main>
+            <div class="form-group">
+              <label class="form-label" for="su-lname">
+                Last Name
+                <span class="required">*</span>
+              </label>
+              <input type="text" id="su-lname" placeholder="" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="su-phone"> Mobile Number </label>
+              <div class="phone-row">
+                <select id="su-country" class="country-code">
+                  <option value="PH" selected>PH (+63)</option>
+                  <option value="US">US (+1)</option>
+                  <option value="GB">GB (+44)</option>
+                  <option value="AU">AU (+61)</option>
+                  <option value="CA">CA (+1)</option>
+                </select>
+                <input
+                  type="tel"
+                  id="su-phone"
+                  class="phone-input"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="su-email"
+                >Email Address
+                <span class="required">*</span>
+              </label>
+              <input type="email" id="su-email" placeholder="" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="su-pass"
+                >Password
+                <span class="required">*</span>
+              </label>
+              <div class="password-field">
+                <input type="password" id="su-pass" placeholder="" required />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-pressed="false"
+                  aria-label="Show password"
+                >
+                  <img
+                    src="Assets/Icons/password eye closed.svg"
+                    alt="toggle password visibility"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="agreement">
+              <input
+                type="checkbox"
+                id="agreeTerms"
+                class="agreement-checkbox"
+                required
+              />
+
+              <label for="agreeTerms" class="agreement-text">
+                By signing up, you agree to our
+                <a href="#">Terms and Privacy Policy</a>, a commitment that
+                safeguards your shopping experience.
+              </label>
+            </div>
+
+            <button id="submitCreateAccount" type="submit" class="btn primary">
+              Create account
+            </button>
+          </form>
+          <form id="loginForm" class="form" autocomplete="on">
+            <div class="form-group">
+              <label class="form-label" for="li-email">Email address</label>
+              <input type="email" id="li-email" placeholder="" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="li-pass">Password</label>
+              <div class="password-field">
+                <input type="password" id="li-pass" placeholder="" required />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-pressed="false"
+                  aria-label="Show password"
+                >
+                  <img
+                    src="Assets/Icons/password eye closed.svg"
+                    alt="toggle password visibility"
+                  />
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="btn primary">Sign in</button>
+          </form>
+        </div>
+      </main>
     </div>
     <script src="auth.js"></script>
-</body>
-
+  </body>
 </html>

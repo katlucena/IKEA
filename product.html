@@ -30,9 +30,15 @@
             </nav>
         </header>
         <section class="product-card"> 
-            <button class="back-button" aria-label="Go back"> 
+            <div class="back-priceOff">
+                <button class="back-button" aria-label="Go back"> 
+                    <img class="icon" src="Assets/Icons/back button.svg" alt="Back" /> 
+                </button>
+                <p class="price-off">32% off</p>
+            </div>
+            <!-- <button class="back-button" aria-label="Go back"> 
                 <img class="icon" src="Assets/Icons/back button.svg" alt="Back" /> 
-            </button> 
+            </button>  -->
             <button class="favorite-button" aria-label="Add to favorites" aria-pressed="false"> 
                 <img class="icon favorite-icon" src="Assets/Icons/heart (colored).svg" alt="Favorite" data-default-src="Assets/Icons/heart (colored).svg" data-active-src="Assets/Icons/heart (white).svg" /> 
             </button>
@@ -58,7 +64,10 @@
                                 <span class="rating-count">(6)</span> 
                             </div>
                         </div>
-                        <p class="price">₱18,999</p>
+                        <div class="prices">
+                            <span class="price-original">₱18,999</span>
+                            <span class="price-sale">₱12,999</span>
+                        </div>
                     </div>
                 </div>
                 <div class="product-copy-block">
