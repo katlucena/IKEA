@@ -42,20 +42,14 @@ if (favoriteButton && favoriteIcon) {
   });
 }
 
-// document.querySelectorAll(".top-seller-card").forEach((card) => {
-//   card.addEventListener("click", () => {
-//     window.location.href = "product.html";
-//   });
-// });
+const ekolsundCard = document.getElementById("ekolsund-card");
 
-document.querySelectorAll(".top-seller-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    document.body.classList.add("slide-out-left");
+ekolsundCard?.addEventListener("click", () => {
+  document.body.classList.add("slide-out-left");
 
-    setTimeout(() => {
-      window.location.href = "product.html";
-    }, 100);
-  });
+  setTimeout(() => {
+    window.location.href = "product.html";
+  }, 100);
 });
 
 document.querySelectorAll(".top-seller-card button").forEach((btn) => {
@@ -98,4 +92,10 @@ drawerOverlay.addEventListener("click", closeAccountDrawer);
 function closeAccountDrawer() {
   accountDrawer.classList.remove("open");
   drawerOverlay.classList.remove("show");
+}
+
+const name = localStorage.getItem("userFirstName");
+
+if (name) {
+  document.querySelector(".drawer-header h2").textContent = `Hej, ${name}!`;
 }

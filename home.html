@@ -98,7 +98,7 @@
           </span>
         </div>
         <div class="top-seller-products">
-          <div class="top-seller-card">
+          <div class="top-seller-card" id="ekolsund-card">
             <button class="arcamera-btn" aria-label="View product">
               <img src="Assets/Icons/ARCamera3.svg" alt="" />
             </button>
@@ -134,8 +134,8 @@
                 <img src="Assets/Icons/star (yellow).svg" alt="Star" />
                 <img src="Assets/Icons/star (yellow).svg" alt="Star" />
                 <img src="Assets/Icons/star (yellow).svg" alt="Star" />
-                <img src="Assets/Icons/star (white).svg" alt="Star" />
-                <img src="Assets/Icons/star (white).svg" alt="Star" />
+                <img src="Assets/Icons/star (yellow).svg" alt="Star" />
+                <img src="Assets/Icons/star (half).svg" alt="Star" />
               </div>
             </div>
             <div class="swatches">
@@ -281,31 +281,28 @@
           </div>
         </div>
       </section>
+      <div id="drawerOverlay" class="drawer-overlay"></div>
+
+      <aside id="accountDrawer" class="account-drawer">
+        <div class="drawer-header">
+          <h2>Hej!</h2>
+
+          <button id="closeDrawer" class="close-drawer">✕</button>
+        </div>
+
+        <nav class="drawer-menu">
+          <a href="#">My Account</a>
+          <a href="#">Addresses</a>
+          <a href="#">Orders</a>
+          <a href="#">Wallet</a>
+          <a href="#">Log Out</a>
+        </nav>
+      </aside>
     </main>
     <div id="toast" class="toast">
       <img src="Assets/Icons/check.svg" alt="Success" class="toast-icon" />
       <span>Added to cart</span>
     </div>
-    <!-- new -->
-    <div id="drawerOverlay" class="drawer-overlay"></div>
-
-    <aside id="accountDrawer" class="account-drawer">
-      <div class="drawer-header">
-        <h2>My Account</h2>
-
-        <button id="closeDrawer" class="close-drawer">✕</button>
-      </div>
-
-      <nav class="drawer-menu">
-        <a href="#">My Account</a>
-        <a href="#">Addresses</a>
-        <a href="#">Orders</a>
-        <a href="#">Wallet</a>
-        <a href="#">Log Out</a>
-      </nav>
-    </aside>
-    <!-- new -->
-
     <script src="home.js"></script>
   </body>
 </html>

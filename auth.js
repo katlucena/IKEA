@@ -95,3 +95,7 @@ window.addEventListener("pageshow", () => {
 });
 
 updateCreateButtonState();
+
+const firstName = document.querySelector("#firstName").value;
+
+localStorage.setItem("firstName", firstName);

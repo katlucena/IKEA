@@ -19,30 +19,45 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background: #ffffff;
-}
 
-html,
-body {
+  overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
+
+  background: #ffffff;
+
+  scrollbar-width: none;
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Edge, Safari */
+  display: none;
 }
 
-/* body { display: flex; justify-content: center; align-items: flex-start; } */
+body {
+  background: #000;
+  margin: 0;
+  padding: 24px;
+
+  display: block;
+
+  overflow-x: hidden;
+}
+
 .page-shell {
-  width: 100%;
-  min-height: 100dvh;
+  width: 430px;
+  min-height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
+
   background: #0066bd;
-  margin: 0;
-  padding: 0;
+
+  border-radius: 36px;
+  overflow: visible;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .top-bar {
@@ -69,7 +84,6 @@ body::-webkit-scrollbar {
 .top-actions {
   display: flex;
   align-items: center;
-  gap: px;
 }
 
 .top-actions button {
@@ -103,18 +117,15 @@ body::-webkit-scrollbar {
 
 .favorite-button {
   position: absolute;
-  border: none;
-  background: transparent;
-  padding: 8px;
-  border-radius: 50%;
-  color: #444;
-  cursor: pointer;
   top: 18px;
   right: 18px;
-  transition:
-    transform 0.18s ease,
-    background-color 0.18s ease,
-    box-shadow 0.18s ease;
+
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  color: #444;
+  cursor: pointer;
 }
 
 .favorite-button .icon {
@@ -128,8 +139,6 @@ body::-webkit-scrollbar {
 .favorite-button:active,
 .favorite-button:focus-visible {
   transform: scale(0.92);
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .favorite-button:active .icon {
@@ -156,17 +165,6 @@ body::-webkit-scrollbar {
   padding: 0;
   color: #444;
   cursor: pointer;
-}
-
-.favorite-button {
-  position: absolute;
-  border: none;
-  background: transparent;
-  padding: 0;
-  color: #444;
-  cursor: pointer;
-  top: 18px;
-  right: 18px;
 }
 
 .image-panel {
@@ -211,9 +209,8 @@ body::-webkit-scrollbar {
 
 h1 {
   margin: 0;
-  font-size: 1.55rem;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .product-subtitle {
@@ -579,13 +576,6 @@ hr.solid {
   margin: 32px 0 8px;
 }
 
-.accordion-content p {
-  margin: 0 0 24px;
-  line-height: 1.6;
-  color: #4b5563;
-  font-size: 16px;
-}
-
 .accordion-header {
   width: 100%;
   display: flex;
@@ -609,12 +599,6 @@ hr.solid {
   color: #4b5563;
   font-size: 13px;
   line-height: 1.6;
-}
-
-.chevron-right {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.3s ease;
 }
 
 .accordion.active .chevron-right {
@@ -678,47 +662,6 @@ hr.solid {
   height: 18px;
 }
 
-.slide-out-right {
-  animation: slideOutRight 100ms ease forwards;
-}
-
-@keyframes slideOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
-
-body {
-  animation: slideInLeft 100ms ease;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-body {
-  opacity: 0;
-  transform: translateX(40px);
-  animation: pageEnter 100ms ease forwards;
-}
-
-@keyframes pageEnter {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@view-transition {
+  navigation: auto;
 }
