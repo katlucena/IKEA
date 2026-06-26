@@ -2,14 +2,11 @@
   --bg: #f7f8fb;
   --primary: #0066bd;
   --primary-start: #0080ff;
-  /* left/top gradient color — customize */
   --primary-end: #0057ad;
-  /* right/bottom gradient color — customize */
   --text: #484848;
   --muted: #6b7280;
 }
 
-/* Reset and base */
 * {
   box-sizing: border-box;
 }
@@ -17,12 +14,6 @@
 html {
   -webkit-text-size-adjust: 100%;
 }
-
-/* html,
-body {
-  height: 100%;
-  overflow: hidden;
-} */
 
 html,
 body {
@@ -61,7 +52,6 @@ body {
 .auth-logo {
   height: 36px;
   display: block;
-  /* margin: 0 auto 10px 0; */
   position: absolute;
   top: 80px;
   left: 25px;
@@ -125,7 +115,6 @@ body {
   gap: 8px;
 }
 
-/* Buttons */
 .btn {
   border-radius: 999px;
   padding: 12px 18px;
@@ -202,7 +191,6 @@ body {
   line-height: 1;
 }
 
-/* Forms area */
 .auth-forms {
   position: fixed;
   inset: 0;
@@ -219,10 +207,6 @@ body {
   font-weight: 600;
   margin-left: 2px;
 }
-
-/* .hidden {
-    display: none;
-} */
 
 .auth-forms {
   position: fixed;
@@ -335,17 +319,6 @@ body {
     sans-serif;
 }
 
-/* .btn-close {
-    padding: 4px;
-    border: none;
-    background: transparent;
-}
-
-.btn-close img {
-    width: 28px;
-    height: 28px;
-} */
-
 .btn-close {
   width: 40px;
   height: 40px;
@@ -360,7 +333,6 @@ body {
   background-size: 20px;
 }
 
-/* Password field: keep input padded and position the toggle button inside the input area */
 .password-field {
   position: relative;
   border: 0.5px solid #929292;
@@ -371,7 +343,6 @@ body {
 .password-field input {
   width: 100%;
   padding-right: 48px;
-  /* space for toggle */
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -448,7 +419,6 @@ body {
   background: transparent;
   font-size: 14px;
   color: #484848;
-  /* adjust this to change the font color */
   padding: 14px 12px;
   height: 48px;
 }
@@ -461,7 +431,6 @@ body {
   -moz-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23374851' stroke-width='2' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  /* larger, thicker chevron */
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23374851' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   padding-right: 40px;
@@ -494,6 +463,54 @@ body {
   cursor: pointer;
 }
 
+.visually-hidden.agreement-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.agreement {
+  position: relative;
+}
+
+.agreement-text {
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.agreement-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid #929292;
+  border-radius: 4px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+
+.visually-hidden.agreement-checkbox:checked + .agreement-text::before {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  background-image: url("Assets/Icons/check.svg");
+}
+
+.visually-hidden.agreement-checkbox:focus-visible + .agreement-text::before {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .agreement-text {
   font-family: "Segoe UI", sans-serif;
   font-size: 13px;
@@ -524,14 +541,6 @@ body {
     transform: scale(0.95);
   }
 }
-
-/* .auth-shell {
-    display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 28px;
-    align-items: center;
-    padding: 40px;
-  } */
 
 .auth-shell {
   width: 430px;

@@ -1,6 +1,3 @@
-/* ============================ */
-/* IMAGE SEARCH (CAMERA BUTTON)  */
-/* ============================ */
 const cameraBtn = document.getElementById("cameraBtn");
 const imageUpload = document.getElementById("imageUpload");
 
@@ -13,14 +10,9 @@ imageUpload.addEventListener("change", (e) => {
 
   if (file) {
     console.log("Selected image:", file.name);
-    // Your image search logic here
-    // Upload to server, run AI search, etc.
   }
 });
 
-/* ============================ */
-/* PROMO CAROUSEL DOTS           */
-/* ============================ */
 const scrollContainer = document.getElementById("promoScroll");
 const slides = scrollContainer.querySelectorAll(".promo-banner");
 const dots = document.querySelectorAll(".dot");
@@ -32,9 +24,6 @@ scrollContainer.addEventListener("scroll", () => {
   dots[index]?.classList.add("active");
 });
 
-/* ============================ */
-/* FAVORITE BUTTONS (ALL CARDS + PRODUCT DETAIL) */
-/* ============================ */
 document.querySelectorAll(".favorite-button").forEach((favoriteButton) => {
   const favoriteIcon = favoriteButton.querySelector(".favorite-icon");
   if (!favoriteButton || !favoriteIcon) return;
@@ -48,17 +37,12 @@ document.querySelectorAll(".favorite-button").forEach((favoriteButton) => {
   });
 });
 
-// prevent buttons inside top-seller cards (favorite, add-to-cart, AR camera)
-// from also triggering the card's "open product detail" click
 document.querySelectorAll(".top-seller-card button").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
   });
 });
 
-/* ============================ */
-/* TOAST ("Added to cart")       */
-/* ============================ */
 const toast = document.getElementById("toast");
 
 function showToast(message = "Added to cart") {
@@ -77,9 +61,6 @@ document.querySelectorAll(".add-btn, .add-cart").forEach((btn) => {
   });
 });
 
-/* ============================ */
-/* ACCOUNT DRAWER                */
-/* ============================ */
 const accountBtn = document.getElementById("accountBtn");
 const accountDrawer = document.getElementById("accountDrawer");
 const drawerOverlay = document.getElementById("drawerOverlay");
@@ -104,10 +85,6 @@ if (name) {
   document.querySelector(".drawer-header h2").textContent = `Hej, ${name}!`;
 }
 
-/* ================================== */
-/* PRODUCT DETAIL SLIDING PANEL        */
-/* (replaces navigating to product.html) */
-/* ================================== */
 const productDetail = document.getElementById("productDetail");
 const ekolsundCard = document.getElementById("ekolsund-card");
 const closeProductDetail = document.getElementById("closeProductDetail");
@@ -128,7 +105,6 @@ function closeProductDetailPanel() {
   productDetail.classList.remove("open");
 }
 
-/* ---- quantity stepper (scoped to product detail panel) ---- */
 const decreaseBtn = productDetail.querySelector("#decrease");
 const increaseBtn = productDetail.querySelector("#increase");
 const quantityEl = productDetail.querySelector("#quantity");
@@ -150,7 +126,6 @@ decreaseBtn?.addEventListener("click", () => {
   }
 });
 
-/* ---- swatch color/image swap (scoped to product detail panel) ---- */
 const productImage = productDetail.querySelector("#productImage");
 
 productDetail.querySelectorAll(".swatch").forEach((swatch) => {
@@ -167,7 +142,6 @@ productDetail.querySelectorAll(".swatch").forEach((swatch) => {
   });
 });
 
-/* ---- accordions (scoped to product detail panel) ---- */
 productDetail.querySelectorAll(".accordion").forEach((accordion) => {
   const header = accordion.querySelector(".accordion-header");
   const content = accordion.querySelector(".accordion-content");

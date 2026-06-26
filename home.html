@@ -60,13 +60,7 @@
             </button>
             <input type="file" id="imageUpload" accept="image/*" hidden />
           </div>
-          <div>
-            <span class="link-tabs">
-              <a href="#" class="active-link">What's new?</a>
-              <a href="#">Offers & promotions</a>
-              <a href="#">Marketplace</a>
-            </span>
-          </div>
+          <div></div>
           <div class="promo-wrapper">
             <div class="promo-scroll" id="promoScroll">
               <img
@@ -91,6 +85,56 @@
               <span class="dot"></span>
             </div>
           </div>
+          <div class="categories-header">
+            <h1>Categories</h1>
+            <span class="see-more">
+              <a class="see-more-link" href="#">See More</a>
+              <img
+                src="Assets/Icons/chevron right.svg"
+                class="chevron-right"
+                alt="chevron right"
+              />
+            </span>
+          </div>
+          <div class="categories-row" id="categoriesScroll">
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/storage.png" alt="Storage" />
+              </div>
+              <span class="category-label">Storage</span>
+            </a>
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/organizer.png" alt="Organizers" />
+              </div>
+              <span class="category-label">Organizers</span>
+            </a>
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/sofa.png" alt="Sofas" />
+              </div>
+              <span class="category-label">Sofas</span>
+            </a>
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/bed.png" alt="Beds" />
+              </div>
+              <span class="category-label">Beds</span>
+            </a>
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/office.png" alt="Office" />
+              </div>
+              <span class="category-label">Office</span>
+            </a>
+            <a href="#" class="category-item">
+              <div class="category-icon">
+                <img src="Assets/Images/kitchen.png" alt="Kitchen" />
+              </div>
+              <span class="category-label">Kitchen</span>
+            </a>
+          </div>
+
           <div class="top-sellers">
             <h1>Top Sellers</h1>
             <span class="see-more">
@@ -291,9 +335,6 @@
           </div>
         </section>
 
-        <!-- ============================ -->
-        <!-- PRODUCT DETAIL SLIDING PANEL -->
-        <!-- ============================ -->
         <section id="productDetail" class="product-detail-panel">
           <div class="back-priceOff">
             <button
@@ -633,9 +674,7 @@
             </div>
           </div>
         </section>
-        <!-- ======== END PRODUCT DETAIL PANEL ======== -->
       </div>
-      <!-- end .content-area -->
 
       <div id="drawerOverlay" class="drawer-overlay"></div>
 
@@ -650,7 +689,7 @@
           <a href="#">Addresses</a>
           <a href="#">Orders</a>
           <a href="#">Wallet</a>
-          <a href="#">Log Out</a>
+          <a href="auth.html">Log Out</a>
         </nav>
       </aside>
     </main>
