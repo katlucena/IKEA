@@ -1,4 +1,4 @@
-IKEA App Design Concept — UX/UI Design & Front-end Deveopment
+IKEA App Design Concept — UX/UI Design & Front-end Development
 
 A front-end concept for a mobile-first IKEA shopping experience, built with plain HTML, CSS, and JavaScript (no frameworks). This project was built to practice translating UX decisions into real, interactive front-end code — drawers, sliding panels, scrollable carousels, and form states that behave the way a native app would.
 
