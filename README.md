@@ -6,10 +6,10 @@ Note: This is a personal portfolio project created for educational purposes. It 
 
 ---------------------------------------
 
-Live demo: 
+[LIVE DEMO] https://katlucena.github.io/IKEA/
 
 [Figma Prototype]
-(https://www.figma.com/proto/kMaNxYHrnXms6XhSTjulSm/IKEA-Mobile-App-Concept?page-id=0%3A1&node-id=803-1600&viewport=-1471%2C-64%2C0.13&t=osEZ9L3ukRoYuOaT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=803%3A1571)
+https://www.figma.com/proto/kMaNxYHrnXms6XhSTjulSm/IKEA-Mobile-App-Concept?page-id=0%3A1&node-id=803-1600&viewport=-1471%2C-64%2C0.13&t=osEZ9L3ukRoYuOaT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=803%3A1571
 
 ---------------------------------------
 
