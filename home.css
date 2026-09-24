@@ -277,12 +277,6 @@ a {
   gap: 22px;
   padding: 18px 16px 6px 20px; /* trailing 16px gutter via the row, not the item */
   scrollbar-width: none;
-  cursor: grab;
-  user-select: none;
-}
-
-.categories-row:active {
-  cursor: grabbing;
 }
 
 .categories-row::-webkit-scrollbar {
@@ -366,7 +360,6 @@ a {
   display: flex;
   overflow-x: auto;
   padding: 24px 0 20px 20px;
-
   scrollbar-width: none;
 }
 
