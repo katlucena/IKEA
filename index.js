@@ -54,6 +54,8 @@ agreementCheckbox.addEventListener("change", () => {
 
 // SIGN UP
 
+const TEST_MODE = true;
+
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -63,10 +65,10 @@ signupForm.addEventListener("submit", (e) => {
 
   const email = document.getElementById("su-email").value.trim();
 
-  if (!firstName || !lastName || !email) {
-    alert("Please complete all required fields.");
-    return;
-  }
+  // if (!firstName || !lastName || !email) {
+  //   alert("Please complete all required fields.");
+  //   return;
+  // }
 
   if (!agreementCheckbox.checked) {
     alert("Please agree to the Terms and Privacy Policy.");
