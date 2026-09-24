@@ -46,11 +46,11 @@ document.querySelectorAll(".password-toggle").forEach((button) => {
 
 // TERMS & CONDITIONS
 
-createButton.disabled = true;
+// createButton.disabled = true;
 
-agreementCheckbox.addEventListener("change", () => {
-  createButton.disabled = !agreementCheckbox.checked;
-});
+// agreementCheckbox.addEventListener("change", () => {
+//   createButton.disabled = !agreementCheckbox.checked;
+// });
 
 // SIGN UP
 
@@ -70,10 +70,10 @@ signupForm.addEventListener("submit", (e) => {
   //   return;
   // }
 
-  if (!agreementCheckbox.checked) {
-    alert("Please agree to the Terms and Privacy Policy.");
-    return;
-  }
+  // if (!agreementCheckbox.checked) {
+  //   alert("Please agree to the Terms and Privacy Policy.");
+  //   return;
+  // }
 
   localStorage.setItem("userFirstName", firstName);
 
@@ -86,18 +86,18 @@ signupForm.addEventListener("submit", (e) => {
   }, 300);
 });
 
-function updateCreateButtonState() {
-  createButton.disabled = !agreementCheckbox.checked;
-}
+// function updateCreateButtonState() {
+//   createButton.disabled = !agreementCheckbox.checked;
+// }
 
-agreementCheckbox.addEventListener("change", updateCreateButtonState);
+// agreementCheckbox.addEventListener("change", updateCreateButtonState);
 
-window.addEventListener("pageshow", () => {
-  updateCreateButtonState();
-});
+// window.addEventListener("pageshow", () => {
+//   updateCreateButtonState();
+// });
 
-updateCreateButtonState();
+// updateCreateButtonState();
 
-const firstName = document.querySelector("#firstName").value;
+// const firstName = document.querySelector("#firstName").value;
 
-localStorage.setItem("firstName", firstName);
+// localStorage.setItem("firstName", firstName);
