@@ -24,6 +24,43 @@ scrollContainer.addEventListener("scroll", () => {
   dots[index]?.classList.add("active");
 });
 
+//scroll
+const categoriesRow = document.getElementById("categoriesScroll");
+
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+categoriesRow.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.pageX - categoriesRow.offsetLeft;
+  scrollLeft = categoriesRow.scrollLeft;
+
+  categoriesRow.classList.add("dragging");
+});
+
+categoriesRow.addEventListener("mouseleave", () => {
+  isDragging = false;
+  categoriesRow.classList.remove("dragging");
+});
+
+categoriesRow.addEventListener("mouseup", () => {
+  isDragging = false;
+  categoriesRow.classList.remove("dragging");
+});
+
+categoriesRow.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - categoriesRow.offsetLeft;
+  const walk = (x - startX) * 1.5;
+
+  categoriesRow.scrollLeft = scrollLeft - walk;
+});
+//scroll
+
 document.querySelectorAll(".favorite-button").forEach((favoriteButton) => {
   const favoriteIcon = favoriteButton.querySelector(".favorite-icon");
   if (!favoriteButton || !favoriteIcon) return;
